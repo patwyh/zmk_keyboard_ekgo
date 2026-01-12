@@ -1,4 +1,5 @@
 config SHIELD_EKGO_LEFT
     def_bool $(shields_list_contains,ekgo_left)
+    
 config SHIELD_EKGO_RIGHT
     def_bool $(shields_list_contains,ekgo_right)

@@ -1,16 +1,14 @@
 file_format: "1"
-id: ergokeeb_ekgo
-name: Ergokeeb EKGO
-url: https://github.com/patwyh/EKGO
+id: ekgo
+name: ekgo
 type: shield
-requires:
-  - pro_micro
+url: https://github.com/patwyh/EKGO
+requires: [pro_micro]
+exposes: [i2c_oled]
 features:
   - keys
   - display
-outputs:
-  - usb
-  - ble
+  - studio
 siblings:
   - ekgo_left
   - ekgo_right

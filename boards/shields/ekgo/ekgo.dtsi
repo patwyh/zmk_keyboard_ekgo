@@ -5,20 +5,11 @@
 *
 */
 
-/dts-v1/;
 #include <dt-bindings/zmk/matrix_transform.h>
-#include <nordic/nrf52840_qiaa.dtsi>
 
 #include <ekgo-layouts.dtsi>
 
-&adc {
-    status = "okay";
-};
-
 / {
-    model = "ekgo";
-    compatible = "ergokeeb,ekgo";
-    
     chosen {
         zephyr,code-partition = &code_partition;
         zephyr,sram = &sram0;
@@ -59,10 +50,10 @@
 
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
-        columns = <1>;
+        columns = <2>;
         rows = <1>;
         map = <
-            RC(0,0)
+            RC(0,0) RC(0,1)
         >; 
     };
 

@@ -14,10 +14,8 @@
                 default_layer {
                         display-name = "Default Layer";
                         bindings = <
-                                &kp Q 
+                                &kp Q &kp W
                         >;
                 };
-};
-             
-
+        };
 };
