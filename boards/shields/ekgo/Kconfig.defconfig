@@ -19,6 +19,9 @@ config ZMK_SPLIT
 config BT_CTLR
     default BT
 
+config ZMK_KSCAN_MATRIX
+        default y
+
 # config CLOCK_CONTROL_NRF_K32SRC_XTAL
 #     default y
 
@@ -33,10 +36,5 @@ config ZMK_EXT_POWER
 
 config ZMK_DISPLAY
     default y
-
-# if USB_DEVICE_STACK
-# config USB_NRFX
-#     default y
-# endif # USB_DEVICE_STACK
 
 endif
