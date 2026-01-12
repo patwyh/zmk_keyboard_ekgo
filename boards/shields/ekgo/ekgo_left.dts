@@ -5,7 +5,7 @@
 *
 */
 
-// #include "ekgo.dtsi"
+ #include "ekgo.dtsi"
 
 // &left_encoder {
 //     status = "okay";
