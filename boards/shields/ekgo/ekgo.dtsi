@@ -5,10 +5,9 @@
 *
 */
 
+#include <ekgo-layouts.dtsi>
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <nordic/nrf52840_qiaa.dtsi>
-
-#include <ekgo-layouts.dtsi>
 
 &adc {
     status = "okay";
