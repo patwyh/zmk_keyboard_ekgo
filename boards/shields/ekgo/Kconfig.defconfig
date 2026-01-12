@@ -19,11 +19,11 @@ config ZMK_SPLIT
 config BT_CTLR
     default BT
 
-config CLOCK_CONTROL_NRF_K32SRC_XTAL
-    default y
+# config CLOCK_CONTROL_NRF_K32SRC_XTAL
+#     default y
 
-config CLOCK_CONTROL_NRF_K32SRC_ACCURACY
-    default 1
+# config CLOCK_CONTROL_NRF_K32SRC_ACCURACY
+#     default 1
 
 config ZMK_BATTERY_REPORTING
     default y
