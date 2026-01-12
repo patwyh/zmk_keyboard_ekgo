@@ -2,3 +2,9 @@
 &default_transform {
     col-offset = <1>;
 };
+
+/ {
+    chosen {
+        zmk,matrix-transform = &default_transform;
+    };
+};
