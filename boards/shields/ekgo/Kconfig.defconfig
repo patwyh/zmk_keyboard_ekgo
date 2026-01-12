@@ -31,15 +31,12 @@ config ZMK_BATTERY_REPORTING
 config ZMK_EXT_POWER
     default y
 
-config ZMK_POINTER
-    default y
-
 config ZMK_DISPLAY
     default y
 
-if USB_DEVICE_STACK
-config USB_NRFX
-    default y
-endif # USB_DEVICE_STACK
+# if USB_DEVICE_STACK
+# config USB_NRFX
+#     default y
+# endif # USB_DEVICE_STACK
 
 endif
