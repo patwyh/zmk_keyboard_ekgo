@@ -1,0 +1,37 @@
+#include "ekgo.dtsi"
+
+/ {
+    
+    chosen {
+        zephyr,display = &display;
+    };
+
+
+    &spi2 {
+        status = "okay";
+        pinctrl-0 = <&spi2_default>;
+        pinctrl-1 = <&spi2_sleep>;
+        pinctrl-names = "default", "sleep";
+        cs-gpios = <&gpio1 4 GPIO_ACTIVE_LOW>;
+
+        display: ssd1306@0 {
+            compatible = "solomon,ssd1306fb-spi";
+            reg = <0>;
+            spi-max-frequency = <8000000>;
+            cmd-data-gpios = <&gpio0 6 GPIO_ACTIVE_HIGH>; // Placeholder DC pin; replace with actual
+            reset-gpios = <&gpio0 8 GPIO_ACTIVE_HIGH>; // Placeholder RST pin; replace with actual
+            width = <128>; // Adjust based on your display specs
+            height = <32>; // Adjust based on your display specs
+            segment-offset = <0>;
+            page-offset = <0>;
+            col-upper-offset = <0>;
+            pre-chargep = <0xf1>;
+            com-invdir;
+            com-seq;
+            vcomh = <0x40>;
+            contrast = <0xcf>;
+            force-selected;
+            status = "okay";
+        };
+    };
+};
