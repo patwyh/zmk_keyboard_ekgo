@@ -7,6 +7,6 @@
 
 #include "ekgo.dtsi"
 
-&default_transform {
-    col-offset = <8>;
-};
+// // &default_transform {
+// //     col-offset = <8>;
+// // };
