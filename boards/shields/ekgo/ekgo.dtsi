@@ -14,6 +14,7 @@
     chosen {
         zmk,kscan = &kscan0;
         zmk,physical-layout = &physical_layout0;
+        zmk,external-power = &extp;
     };
 
     kscan0: kscan  {
@@ -59,7 +60,7 @@
         full-ohms = <(2000000 + 820000)>;
     };
 
-    ext_power: ext_power {
+    extp: ext_power {
         compatible = "zmk,ext-power-generic";
         enable-gpios = <&gpio1 9 GPIO_ACTIVE_HIGH>;
     };
