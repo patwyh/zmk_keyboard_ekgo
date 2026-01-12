@@ -1,3 +1,5 @@
+#include <ekgo.dtsi>
+
 / {
     chosen {
         zmk,kscan = &kscan0;
