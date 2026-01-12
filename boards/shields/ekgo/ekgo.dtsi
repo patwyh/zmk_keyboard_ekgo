@@ -15,35 +15,19 @@
 
 / {
     model = "ekgo";
+    compatible = "ergokeeb,ekgo";
     
     chosen {
+        zephyr,code-partition = &code_partition;
+        zephyr,sram = &sram0;
+        zephyr,flash = &flash0;
         zmk,battery = &battery;
         zmk,ext-power = &ext_power;
-        zmk,physical-layout = &physical_layout_0;
         zmk,kscan = &kscan0;
+        zmk,physical-layout = &physical_layout;
     };
 
-    battery: battery {
-        compatible = "zmk,battery-voltage-divider";
-        io-channels = <&adc 3>; // P0.04 is AIN2, positive input 3
-        output-ohms = <2000000>;
-        full-ohms = <(2000000 + 820000)>;
-    };
-
-    ext_power: ext_power {
-        compatible = "zmk,ext-power-generic";
-        enable-gpios = <&gpio1 9 GPIO_ACTIVE_HIGH>;
-    };
-
-    charge_led: leds {
-        compatible = "gpio-leds";
-        leds {
-            compatible = "gpio-led";
-            gpios = <&gpio1 10 GPIO_ACTIVE_LOW>; // Assume active low; adjust if needed
-            label = "charge_status";
-        };
-    };
-
+    
     kscan0: kscan0  {
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
@@ -85,4 +69,26 @@
             // RC(6,0) RC(6,1) RC(6,2) RC(6,3) RC(6,4) RC(6,5) RC(6,6) RC(6,7)
             // RC(7,0) RC(7,1) RC(7,2) RC(7,3) RC(7,4) RC(7,5) RC(7,6) RC(7,7)
     };
+
+    battery: battery {
+        compatible = "zmk,battery-voltage-divider";
+        io-channels = <&adc 3>; // P0.04 is AIN2, positive input 3
+        output-ohms = <2000000>;
+        full-ohms = <(2000000 + 820000)>;
+    };
+
+    ext_power: ext_power {
+        compatible = "zmk,ext-power-generic";
+        enable-gpios = <&gpio1 9 GPIO_ACTIVE_HIGH>;
+    };
+
+    charge_led: leds {
+        compatible = "gpio-leds";
+        leds {
+            compatible = "gpio-led";
+            gpios = <&gpio1 10 GPIO_ACTIVE_LOW>; // Assume active low; adjust if needed
+            label = "charge_status";
+        };
+    };
+
 };
