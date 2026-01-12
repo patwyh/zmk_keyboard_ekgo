@@ -24,7 +24,7 @@
         zmk,battery = &battery;
         zmk,ext-power = &ext_power;
         zmk,kscan = &kscan0;
-        zmk,physical-layout = &physical_layout;
+        zmk,physical-layout = &default_layout;
     };
 
     
