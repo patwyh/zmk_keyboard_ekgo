@@ -21,7 +21,6 @@
         zmk,ext-power = &ext_power;
         zmk,physical-layout = &physical_layout_0;
         zmk,kscan = &kscan0;
-        zmk,matrix-transform = &default_transform;
     };
 
     battery: battery {
