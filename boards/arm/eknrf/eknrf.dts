@@ -98,6 +98,27 @@ zephyr_udc0: &usbd {
 };
 
 
+&adc {
+    status = "okay";
+};
+
+&gpiote {
+    status = "okay";
+};
+
+&gpio0 {
+    status = "okay";
+};
+
+&gpio1 {
+    status = "okay";
+};
+
+zephyr_udc0: &usbd {
+    status = "okay";
+};
+
+
 &flash0 {
     /*
      * For more information, see:
