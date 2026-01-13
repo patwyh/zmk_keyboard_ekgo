@@ -18,7 +18,7 @@
 #     artifact-name: corne_left_with_studio
 
 include:
-  - board: test
+  - board: eknrf
     shield: ekgo_left
-  - board: test
+  - board: eknrf
     shield: ekgo_right
