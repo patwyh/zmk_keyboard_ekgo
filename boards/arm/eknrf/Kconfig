@@ -2,3 +2,9 @@ config BOARD_EKGO_CHARGER
     bool "Enable battery charger"
     default y
     depends on (BOARD_EKGO && BOARD_REVISION = "1.0.0")
+
+config BOARD_EKNRF
+    bool "eknrf"
+    depends on SOC_NRF52840_QIAA
+    select SOC_SERIES_NRF52X # This enables HAS_NRFX and basic peripherals
+    select CLOCK_CONTROL      # This fixes the CLOCK_CONTROL_NRF warning s
