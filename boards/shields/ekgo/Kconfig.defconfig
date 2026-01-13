@@ -16,16 +16,4 @@ config ZMK_SLEEP
 config ZMK_SPLIT
     default y
 
-config BT_CTLR
-    default BT
-
-config ZMK_BATTERY_REPORTING
-    default y
-
-config ZMK_EXT_POWER
-    default y
-
-config ZMK_DISPLAY
-    default y
-
 endif
