@@ -3,7 +3,7 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if BOARD_EKNRF_NRF52840
+if BOARD_EKNRF_LEFT || BOARD_EKNRF_RIGHT
 
 config BOARD
     default "eknrf"
@@ -17,13 +17,6 @@ endif # USB_DEVICE_STACK
 
 config BT_CTLR
     default BT
-
-if BOARD_REVISION = "1.0.0"
-
-config BOARD_EKNRF_CHARGER
-    default y
-
-endif # BOARD_REVISION = "1.0.0"
 
 
 endif # BOARD_EKNRF_NRF52840 || BOARD_EKNRF_NRF52840_FLIPPED || BOARD_EKNRF_NRF52833
