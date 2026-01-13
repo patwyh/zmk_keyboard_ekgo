@@ -14,7 +14,13 @@
     chosen {
         zmk,kscan = &kscan0;
         zmk,physical-layout = &physical_layout0;
-        zmk,external-power = &extp;
+        zmk,ext-power = &ext_power;
+    };
+
+    EXT_POWER {
+        compatible = "zmk,ext-power-generic";
+        control-gpios = <&gpio1 9 GPIO_ACTIVE_HIGH>;
+        init-delay-ms = <50>;
     };
 
     kscan0: kscan  {
@@ -58,11 +64,6 @@
         io-channels = <&adc 3>; // P0.04 is AIN2, positive input 3
         output-ohms = <2000000>;
         full-ohms = <(2000000 + 820000)>;
-    };
-
-    extp: ext_power {
-        compatible = "zmk,ext-power-generic";
-        enable-gpios = <&gpio1 9 GPIO_ACTIVE_HIGH>;
     };
 
     charge_led: leds {
