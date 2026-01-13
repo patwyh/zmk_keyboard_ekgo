@@ -8,7 +8,7 @@
 
 #include <nordic/nrf52840_qiaa.dtsi>
 #include "nrf52840_uf2_boot_mode.dtsi"
-//#include <dt-bindings/regulator/nrf5x.h>
+#include <dt-bindings/regulator/nrf5x.h>
 
 #include "arduino_pro_micro_pins.dtsi"
 #include "eknrf-pinctrl.dtsi"
