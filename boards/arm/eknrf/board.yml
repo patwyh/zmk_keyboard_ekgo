@@ -1,6 +1,6 @@
 board:
-  name: nrfmicro
-  vendor: joric
+  name: eknrf
+  vendor: ergokeeb
   socs:
     - name: nrf52840
       variants:

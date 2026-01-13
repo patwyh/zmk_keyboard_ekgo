@@ -1,0 +1,4 @@
+config BOARD_EKNRF_CHARGER
+    bool "Enable battery charger"
+    default y
+    depends on (BOARD_EKNRF && BOARD_REVISION = "1.0.0")

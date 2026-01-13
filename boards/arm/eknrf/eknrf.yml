@@ -1,0 +1,12 @@
+file_format: "1"
+id: eknrf/nrf52840
+name: eknrf (nRF52840) 1.0
+arch: arm
+outputs:
+  - usb
+  - ble
+url: https://github.com/eknrf/
+exposes: [pro_micro]
+revisions:
+  - "1.0.0"
+default_revision: "1.0.0"

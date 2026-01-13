@@ -9,11 +9,11 @@
 #include <common/nordic/nrf52840_uf2_boot_mode.dtsi>
 
 #include "arduino_pro_micro_pins.dtsi"
-#include "nrfmicro-pinctrl.dtsi"
+#include "eknrf-pinctrl.dtsi"
 
 / {
-    model = "nrfmicro";
-    compatible = "joric,nrfmicro";
+    model = "eknrf";
+    compatible = "ergokeeb,eknrf";
 
     chosen {
         zephyr,code-partition = &code_partition;
